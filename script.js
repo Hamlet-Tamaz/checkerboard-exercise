@@ -6,13 +6,18 @@ var c1 = "rgb(randN(), randN(), randN())";
 var c2 = "rgb(randN(), randN(), randN())";
 
 var body = document.getElementsByTagName('body')[0];
-var containerDiv = document.createElement('div');
+
+var audio = new Audio('psy.mp3');
+audio.play();
 
 
+setInterval(function() {
 
-body.appendChild(containerDiv);
+	body.innerHTML = "";
+	var containerDiv = document.createElement('div');
+	body.appendChild(containerDiv);
 
-for (var i = 1; i < 100; i++) {
+	for (var i = 1; i < 100; i++) {
 	var randN1 = Math.floor(Math.random() *250);
 	var randN2 = Math.floor(Math.random() *250);
 	var randN3 = Math.floor(Math.random() *250);
@@ -41,7 +46,7 @@ for (var i = 1; i < 100; i++) {
 		// div.innerText = `${count}`;
 	}	
 	count++;
-}
+}}, 2000);
 
 
 
